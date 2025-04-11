@@ -10,20 +10,17 @@
 #' @return NULL (saves the plot to file)
 #' @export
 create_histogram_grid <- function(df, vars, output_path) {
-  library(ggplot2)
-  library(cowplot)
-  library(purrr)
-
-  plot_list <- map(vars, function(var) {
-    ggplot(df, aes(x = !!sym(var))) +
-      geom_histogram(bins = 50, fill = "blue", color = "black") +
-      ggtitle(paste("Distribution of", var)) +
-      xlab(var) + ylab("Count") +
-      theme_minimal()
+  
+  plot_list <- purrr::map(vars, function(var) {
+    ggplot2::ggplot(df, ggplot2::aes(x = !!rlang::sym(var))) +
+      ggplot2::geom_histogram(bins = 50, fill = "blue", color = "black") +
+      ggplot2::ggtitle(paste("Distribution of", var)) +
+      ggplot2::xlab(var) + ggplot2::ylab("Count") +
+      ggplot2::theme_minimal()
   })
 
   combined_plot <- cowplot::plot_grid(plotlist = plot_list, ncol = 2)
 
-  ggsave(filename = output_path,
-         plot = combined_plot, width = 15, height = 20)
+  ggplot2::ggsave(filename = output_path,
+                  plot = combined_plot, width = 15, height = 20)
 }

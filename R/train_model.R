@@ -4,12 +4,10 @@
 #' @return A trained caret model.
 #' @export
 train_model <- function(train_data) {
-  library(caret)
-
-  model <- train(
+  model <- caret::train(
     price ~ ., data = train_data,
     method = "lm",
-    trControl = trainControl(method = "cv", number = 5)
+    trControl = caret::trainControl(method = "cv", number = 5)
   )
 
   return(model)

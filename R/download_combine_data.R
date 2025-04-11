@@ -6,18 +6,17 @@
 #' @return A combined data frame with an added city and weekdays column.
 #' @export
 download_combine_data <- function(urls) {
-  library(tidyverse)
   
-  airbnb_list <- map2(urls, names(urls), function(url, name) {
-    df <- read_csv(url, show_col_types = FALSE) %>%
-      mutate(
+  airbnb_list <- purrr::map2(urls, names(urls), function(url, name) {
+    df <- readr::read_csv(url, show_col_types = FALSE) %>%
+      dplyr::mutate(
         weekdays = grepl("weekdays", name),
-        city = word(name, 1, sep = "_")
+        city = stringr::word(name, 1, sep = "_")
       )
     return(df)
   })
   
-  airbnb_combined <- bind_rows(airbnb_list)
+  airbnb_combined <- dplyr::bind_rows(airbnb_list)
   
   return(airbnb_combined)
 }
