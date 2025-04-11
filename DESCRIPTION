@@ -1,9 +1,14 @@
 Package: airbnbtools
 Title: Tools for Working with Airbnb Datasets
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: The airbnbtools package provides a set of functions designed to simplify the process of downloading, cleaning, transforming, and analyzing Airbnb datasets.
+Authors@R: c(
+    person("Zijian", "Cheng", role = c("aut")),
+    person("Yueyang", "Ding", role = c("aut")),
+    person("Tiffany", "Gong", role = c("aut")),
+    person("Chenguang", "Li", role = c("aut")))
+Description: The airbnbtools package provides a set of functions designed to simplify
+    the process of downloading, cleaning, transforming, and analyzing Airbnb datasets.
+URL: https://dsci-310-2025.github.io/airbnbtools/
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
