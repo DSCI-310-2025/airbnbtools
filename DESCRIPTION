@@ -2,7 +2,7 @@ Package: airbnbtools
 Title: Tools for Working with Airbnb Datasets
 Version: 0.0.0.9000
 Authors@R: c(
-    person("Zijian", "Cheng", role = c("aut")),
+    person("Zijian", "Cheng", email = "kevinzjcheng@gmail.com", role = c("aut", "cre")),
     person("Yueyang", "Ding", role = c("aut")),
     person("Tiffany", "Gong", role = c("aut")),
     person("Chenguang", "Li", role = c("aut")))
