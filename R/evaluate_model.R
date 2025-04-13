@@ -9,6 +9,7 @@
 #' @return A tibble with RMSE, MAE, and R-squared values
 #' @export
 #' @importFrom tibble tibble
+#' @importFrom stats predict cor
 #' @examples
 #' # Example with a simple linear model
 #' df <- data.frame(

@@ -6,6 +6,7 @@
 #'
 #' @return A data frame with the specified columns converted to factors
 #' @importFrom magrittr %>%
+#' @importFrom dplyr across all_of
 #' @export
 #' @examples
 #' df <- data.frame(
