@@ -5,6 +5,13 @@
 
 <!-- badges: start -->
 
+[![codecov](https://codecov.io/gh/DSCI-310-2025/airbnbtools/graph/badge.svg?token=M05R361SU6)](https://codecov.io/gh/DSCI-310-2025/airbnbtools)
+[![R-CMD-check](https://github.com/DSCI-310-2025/airbnbtools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DSCI-310-2025/airbnbtools/actions/workflows/R-CMD-check.yaml)
+[![License:
+MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/)
+
 <!-- badges: end -->
 
 The goal of **airbnbtools** is to streamline the process of working with
@@ -12,6 +19,11 @@ Airbnb datasets, offering tools for downloading, transforming, and
 modeling data. This package provides several functions to automate tasks
 such as data acquisition, data cleaning, and model training and
 evaluation, helping to make the data analysis workflow more efficient.
+
+You can find the documentation for this package at the following URL:
+
+[airbnbtools
+Documentation](https://dsci-310-2025.github.io/airbnbtools/)
 
 ## Installation
 
@@ -89,7 +101,7 @@ print(result)
 #> # A tibble: 1 × 3
 #>    RMSE   MAE    R2
 #>   <dbl> <dbl> <dbl>
-#> 1  1.03 0.816 0.971
+#> 1 0.865 0.703 0.972
 ```
 
 ### Split data into training and testing sets
@@ -102,12 +114,12 @@ df <- data.frame(x = rnorm(100), y = rnorm(100))
 split_data <- split_train_test(df, response_col = "y", train_ratio = 0.75)
 str(split_data$train)
 #> 'data.frame':    76 obs. of  2 variables:
-#>  $ x: num  -0.278 -2.128 0.43 0.134 -0.731 ...
-#>  $ y: num  0.0127 0.5727 0.7917 1.913 1.1718 ...
+#>  $ x: num  -0.1499 -0.6169 1.6517 0.0968 0.5916 ...
+#>  $ y: num  1.469 -1.14 0.522 -0.847 -0.4 ...
 str(split_data$test)
 #> 'data.frame':    24 obs. of  2 variables:
-#>  $ x: num  -1.074 -1.757 0.624 1.086 -0.376 ...
-#>  $ y: num  -0.468 -0.525 -1.221 0.258 0.317 ...
+#>  $ x: num  1.832 -0.569 2.178 -0.475 -1.533 ...
+#>  $ y: num  -2.428 -0.297 -2.089 -0.72 0.221 ...
 ```
 
 ### Train a regression model using caret
@@ -122,6 +134,9 @@ df <- data.frame(
   rating = rnorm(100, mean = 4, sd = 0.5)
 )
 model <- train_model(df)
+#> Loading required package: ggplot2
+#> Warning: package 'ggplot2' was built under R version 4.2.3
+#> Loading required package: lattice
 summary(model)
 #> 
 #> Call:
