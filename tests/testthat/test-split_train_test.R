@@ -1,5 +1,5 @@
 library(testthat)
-source("../../R/split_train_test.R")
+library(airbnbtools)
 
 test_that("split_train_test returns a list with train and test sets", {
   df <- data.frame(
@@ -7,9 +7,9 @@ test_that("split_train_test returns a list with train and test sets", {
     bedrooms = 1:5,
     city = rep(c("Paris", "Berlin"), length.out = 5)
   )
-  
+
   result <- split_train_test(df, response_col = "price", train_ratio = 0.8)
-  
+
   expect_type(result, "list")
   expect_named(result, c("train", "test"))
   expect_s3_class(result$train, "data.frame")
@@ -19,7 +19,7 @@ test_that("split_train_test returns a list with train and test sets", {
 test_that("split_train_test respects train_ratio approximately", {
   df <- data.frame(price = 1:100, x = rnorm(100))
   result <- split_train_test(df, "price", train_ratio = 0.7)
-  
+
   expect_true(abs(nrow(result$train) - 70) <= 2)
   expect_true(abs(nrow(result$test) - 30) <= 2)
 })

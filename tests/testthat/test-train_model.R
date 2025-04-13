@@ -1,5 +1,5 @@
 library(testthat)
-source("../../R/train_model.R")
+library(airbnbtools)
 
 test_that("train_model returns a caret model", {
   df <- data.frame(
