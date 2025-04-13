@@ -3,6 +3,8 @@
 
 # airbnbtools
 
+![R-CMD-check](https://github.com/DSCI-310-2025/airbnbtools/actions/workflows/R-CMD-check.yaml/badge.svg)
+
 <!-- badges: start -->
 
 <!-- badges: end -->
