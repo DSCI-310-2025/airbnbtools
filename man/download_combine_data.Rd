@@ -16,3 +16,15 @@ A combined data frame with an added city and weekdays column.
 \description{
 This function downloads Airbnb data from given URLs, adds metadata, and combines them.
 }
+\examples{
+# Not run because this requires internet and real URLs:
+\dontrun{
+urls <- list(
+  "Vancouver_weekdays" = "https://example.com/vancouver_weekdays.csv",
+  "Toronto_weekends" = "https://example.com/toronto_weekends.csv"
+)
+combined_df <- download_combine_data(urls)
+head(combined_df)
+}
+
+}

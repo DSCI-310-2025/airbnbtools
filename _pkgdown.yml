@@ -2,28 +2,3 @@ url: https://dsci-310-2025.github.io/airbnbtools/
 template:
   bootstrap: 5
 
-home:
-  title: Airbnbtools
-  description: >
-    A collection of modular R functions to help process and model Airbnb listing data across European cities.
-
-authors:
-  - name: "Kevin Cheng, Yueyang Ding, Tiffany Gong, Chenguang Li"
-    affiliation: "UBC DSCI 310"
-
-reference:
-  - title: "Main Functions"
-    contents:
-      - convert_columns_to_factor
-      - create_histogram_grid
-      - download_combine_data
-      - evaluate_model
-      - split_train_test
-      - train_model
-
-navbar:
-  structure:
-    left:
-      - home
-      - reference
-      - articles
