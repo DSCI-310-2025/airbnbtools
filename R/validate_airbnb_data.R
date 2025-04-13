@@ -38,9 +38,9 @@ validate_airbnb_data <- function(df) {
   # 3. Check realSum (price) > 0
   if (any(df$realSum <= 0, na.rm = TRUE)) stop("realSum contains non-positive values.")
 
-  # 4. Check person_capacity is in reasonable range (1–16)
+  # 4. Check person_capacity is in reasonable range (1-16)
   if (any(df$person_capacity < 1 | df$person_capacity > 16, na.rm = TRUE)) {
-    stop("person_capacity is outside expected range (1–16).")
+    stop("person_capacity is outside expected range (1-16).")
   }
 
   # 5. Check city values are from expected set
@@ -55,7 +55,7 @@ validate_airbnb_data <- function(df) {
     stop("Unexpected room_type values found.")
   }
 
-  # 7. Check guest satisfaction scores are between 0–5
+  # 7. Check guest satisfaction scores are between 0-5
   if (any(df$guest_satisfaction_overall < 0 | df$guest_satisfaction_overall > 5, na.rm = TRUE)) {
     stop("guest_satisfaction_overall must be between 0 and 5.")
   }
