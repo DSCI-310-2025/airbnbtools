@@ -15,3 +15,15 @@ A trained caret model.
 \description{
 Train a regression model using caret
 }
+\examples{
+\dontrun{
+library(caret)
+df <- data.frame(
+  price = rnorm(100, mean = 200, sd = 50),
+  size = rnorm(100, mean = 80, sd = 10),
+  rating = rnorm(100, mean = 4, sd = 0.5)
+)
+model <- train_model(df)
+summary(model)
+}
+}

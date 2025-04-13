@@ -15,3 +15,14 @@ A data frame with the specified columns converted to factors
 \description{
 This function takes a data frame and converts specified columns to factors.
 }
+\examples{
+df <- data.frame(
+  room_type = c("Private room", "Entire home/apt"),
+  host_is_superhost = c("t", "f"),
+  city = c("Madrid", "Barcelona"),
+  weekdays = c(TRUE, FALSE),
+  price = c(100, 150)
+)
+convert_columns_to_factor(df)
+
+}

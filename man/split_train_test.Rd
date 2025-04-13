@@ -22,3 +22,12 @@ A list containing two elements: 'train' and 'test', which are data frames
 This function splits a dataset into training and testing sets using stratified sampling
 based on the response variable.
 }
+\examples{
+df <- data.frame(
+  x = rnorm(100),
+  y = rnorm(100)
+)
+split_data <- split_train_test(df, response_col = "y", train_ratio = 0.75)
+str(split_data$train)
+str(split_data$test)
+}

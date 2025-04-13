@@ -15,3 +15,22 @@ A data frame with the specified columns converted to factors
 \description{
 This function takes a data frame and converts specified columns to factors.
 }
+\examples{
+# Create dummy data
+df <- data.frame(
+  realSum = c(100, 200, 300),
+  room_type = c("Entire home/apt", "Private room", "Shared room"),
+  person_capacity = c(2, 1, 3),
+  bedrooms = c(1, 1, 2),
+  cleanliness_rating = c(4.5, 4, 3.5),
+  guest_satisfaction_overall = c(4, 5, 4),
+  lng = c(13.4050, 2.3522, -0.1276),
+  lat = c(52.5200, 48.8566, 51.5074),
+  city = c("berlin", "paris", "london"),
+  weekdays = c("Monday", "Tuesday", "Wednesday")
+)
+
+# Validate the dummy data
+validate_airbnb_data(df)
+
+}
