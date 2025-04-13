@@ -1,8 +1,5 @@
 library(testthat)
-source("../../R/validate_airbnb_data.R")
-
-# Load the function (adjust path accordingly)
-source("../../R/validate_airbnb_data.R")
+library(airbnbtools)
 
 test_that("validate_airbnb_data passes silently with valid sample data", {
   # Create mock data
