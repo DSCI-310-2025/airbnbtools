@@ -5,6 +5,7 @@
 #' @param df A data frame containing the columns: room_type, host_is_superhost, city, weekdays
 #'
 #' @return A data frame with the specified columns converted to factors
+#' @importFrom magrittr %>%
 #' @export
 #' @examples
 #' df <- data.frame(

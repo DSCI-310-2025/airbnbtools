@@ -16,7 +16,7 @@
 #'   x = rnorm(100),
 #'   y = rnorm(100)
 #' )
-#' split_data <- split_train_test(df, train_frac = 0.75)
+#' split_data <- split_train_test(df, response_col = "y", train_ratio = 0.75)
 #' str(split_data$train)
 #' str(split_data$test)
 

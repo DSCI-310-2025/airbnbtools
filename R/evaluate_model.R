@@ -8,7 +8,7 @@
 #'
 #' @return A tibble with RMSE, MAE, and R-squared values
 #' @export
-#'
+#' @importFrom tibble tibble
 #' @examples
 #' # Example with a simple linear model
 #' df <- data.frame(
