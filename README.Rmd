@@ -16,9 +16,19 @@ knitr::opts_chunk$set(
 # airbnbtools
 
 <!-- badges: start -->
+
+[![codecov](https://codecov.io/gh/DSCI-310-2025/airbnbtools/graph/badge.svg?token=M05R361SU6)](https://codecov.io/gh/DSCI-310-2025/airbnbtools)
+[![R-CMD-check](https://github.com/DSCI-310-2025/airbnbtools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DSCI-310-2025/airbnbtools/actions/workflows/R-CMD-check.yaml)
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+ [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/)
+ 
 <!-- badges: end -->
 
 The goal of **airbnbtools** is to streamline the process of working with Airbnb datasets, offering tools for downloading, transforming, and modeling data. This package provides several functions to automate tasks such as data acquisition, data cleaning, and model training and evaluation, helping to make the data analysis workflow more efficient.
+
+You can find the documentation for this package at the following URL:
+
+[airbnbtools Documentation](https://dsci-310-2025.github.io/airbnbtools/)
 
 ## Installation
 
