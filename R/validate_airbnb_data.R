@@ -5,7 +5,7 @@
 #' @param df A data frame containing the columns: room_type, host_is_superhost, city, weekdays
 #'
 #' @return A data frame with the specified columns converted to factors
-#' @example
+#' @examples
 #' # Create dummy data
 #' df <- data.frame(
 #'   realSum = c(100, 200, 300),
